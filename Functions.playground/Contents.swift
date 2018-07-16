@@ -4,12 +4,17 @@ func calculateBMI(weight: Double, height: Double) -> Double {
     return weight / pow(height / 100, 2)
 }
 
-let BMI = calculateBMI(weight: 60.5, height: 167.5)
+let BMI: Double = calculateBMI(weight: 60.5, height: 167.5)
+let shortBMI: String = String(format: "%.2f", BMI)
+
+var interpretation = ""
 
 if BMI > 25 {
-    print("Your BMI is \(BMI), You are overweight.")
+    interpretation = "you are overweight."
 } else if BMI >= 18.5 {
-    print("Your BMI is \(BMI), You are normal weight.")
+    interpretation = "you have a normal weight."
 } else {
-    print("Your BMI is \(BMI), You are underweight.")
+    interpretation = "you are overweight."
 }
+
+print("Your BMI is \(shortBMI) and \(interpretation)")
