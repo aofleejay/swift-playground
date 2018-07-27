@@ -37,3 +37,21 @@ func beerSong(forThisManyBottlesOfBeer totalNumberOfBottles: Int) -> String {
 }
 
 print(beerSong(forThisManyBottlesOfBeer: 25))
+
+func fibonacci(until n: Int) {
+    print(0)
+    print(1)
+    
+    var num1: Int = 0
+    var num2: Int = 1
+    
+    for _ in 0...n {
+        let num: Int = num1 + num2
+        print(num)
+
+        num1 = num2
+        num2 = num
+    }
+}
+
+fibonacci(until: 20)
